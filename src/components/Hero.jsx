@@ -39,7 +39,7 @@ const Home = () => {
       <div className="relative z-10 min-h-screen flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center px-4">
-            <h1 className="text-7xl md:text-5xl lg:text-5xl mt-32 md:mt-0 tracking-widest font-medium leading-tight mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl mt-32 md:mt-0 tracking-widest font-medium leading-tight mb-6 text-white">
               <span className="block mb-2">Find Your Best Staycation   </span>
               <span>in Horizone Hotel</span>
             </h1>

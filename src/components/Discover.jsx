@@ -2,7 +2,7 @@ import React from 'react'
 
 const Discover = () => {
   return (
-    <div className='bg-white p-5 text-gray-950'>
+    <div className='bg-white p-5 text-gray-800 tracking-wider'>
  <h1 className='text-3xl'>Discover Our Environs</h1>
  <p className='text-gray-500'>Explore our deluxe environs to help our clients be comfortable </p>
 
@@ -13,7 +13,7 @@ const Discover = () => {
 </div>
 
 <div className="div-1">
-  <h1 className='font-semibold text-xl'>Lounge</h1>
+  <h1 className='font-semibold  text-xl'>Lounge</h1>
   <img src="/m2.jpg" alt="" className=' mt-2 rounded-lg object-cover  w-full h-[150px]' />
 </div>
 <div className="div-1 ">
