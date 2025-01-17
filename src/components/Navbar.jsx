@@ -1,12 +1,4 @@
-// import React from 'react'
 
-// const Navbar = () => {
-//   return (
-//     <div>Navbar</div>
-//   )
-// }
-
-// export default Navbar
 
 
 "use client"
@@ -27,12 +19,19 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/#home", label: "Home" },
-    { href: "/#about", label: "About" },
+    { href: "#about", label: "About" },
     { href: "/#rooms", label: "Rooms" },
     { href: "/#service", label: "Facilities" },
     { href: "/#contact", label: "Offers" },
 
   ];
+  const phoneNumber = "07015910621";
+  const message = "Hello! I'm interested in booking a room at Horizone Hotel.";
+
+  const handleClick = () => {
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
   
   return (
     <nav className='fixed w-full  top-0 z-50'
@@ -59,13 +58,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <a 
-            href="/login" 
+        <div className="hidden lg:block" onClick={handleClick}
+        >
+          <button
             className='text-sm xl:text-base   px-5 py-3 xl:px-4 xl:py-2 rounded-sm bg-white text-black   transition-colors'
           >
             Contact
-          </a>
+          </button>
         </div>
 
         <div className="lg:hidden">
@@ -74,7 +73,7 @@ export default function Navbar() {
             className='text-neutral-800 focus:outline-none'
           >
             {mobileOpen ? (
-              <XIcon className='text-red-500 w-6 h-6 sm:w-8 sm:h-8' />
+              <XIcon className='text--100 w-6 h-6 sm:w-8 sm:h-8' />
             ) : (
               <MenuIcon className='w-6 text-gray-100 h-6 sm:w-8 sm:h-8' />
             )}
@@ -83,12 +82,12 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className='fixed inset-0 bg-[#f1f5f9] z-40 lg:hidden overflow-y-auto'>
+        <div className='fixed inset-0 bg-[#212222] z-40 lg:hidden overflow-y-auto'>
           <div className="container mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-8">
-              <span className='text-xl font-bold text-neutral-900'>GRIYO</span>
+              <span className='text-xl font-bold text-neutral-100'>Horizone</span>
               <button onClick={toggleNavbar}>
-                <XIcon className='text-gray-900 w-8 h-8' />
+                <XIcon className='text-gray-100 w-8 h-8' />
               </button>
             </div>
 
@@ -97,7 +96,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a 
                     href={link.href} 
-                    className='text-lg sm:text-xl text-neutral-800 hover:text-blue-600'
+                    className='text-lg sm:text-xl text-neutral-100 hover:text-blue-600'
                     onClick={toggleNavbar}
                   >
                     {link.label}
@@ -106,13 +105,12 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <div className="mt-8 text-center">
-              <a 
-                href="/login" 
-                className='border border-gray-500  text-black px-6 py-3 rounded-full text-lg'
+            <div className="mt-8 text-center"onClick={handleClick} >
+              <button 
+                className=' text-black bg-white px-6 py-3 rounded-md text-lg'
               >
                 Contact
-              </a>
+              </button>
             </div>
           </div>
         </div>

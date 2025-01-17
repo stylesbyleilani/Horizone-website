@@ -4,7 +4,7 @@ import { CiStar } from "react-icons/ci";
 
 const Trending = () => {
   return (
-    <div className='bg-white p-5 text-gray-950'>
+    <div className='bg-white p-5 text-gray-950' id='rooms'>
     <h1 className='text-3xl'>Deluxe Rooms</h1>
     <p className='text-gray-500'>Explore our deluxe environs to help our clients be comfortable </p>
    

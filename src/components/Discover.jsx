@@ -2,7 +2,7 @@ import React from 'react'
 
 const Discover = () => {
   return (
-    <div className='bg-white p-5 text-gray-800 tracking-wider'>
+    <div className='bg-white p-5 text-gray-800 tracking-wider' id='about'>
  <h1 className='text-3xl'>Discover Our Environs</h1>
  <p className='text-gray-500'>Explore our deluxe environs to help our clients be comfortable </p>
 
@@ -33,3 +33,4 @@ const Discover = () => {
 }
 
 export default Discover
+// Add animation to make it more appealing fffffffffffffffffffffff
