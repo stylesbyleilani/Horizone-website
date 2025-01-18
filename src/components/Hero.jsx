@@ -2,8 +2,6 @@
 
 "use client"
 import React, { useState } from 'react';
-import { ArrowBigDownDash, LocateIcon } from 'lucide-react';
-import Image from 'next/image';
 import { db } from '@/Library/firebase';
 import { addDoc, collection } from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
@@ -11,10 +9,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import WhatsAppButton from './WhatsappButton';
 
 const Home = () => {
-  const [roomType, setRoomType] = useState()
-  const [arrival, setArrival] = useState()
-  const [departure, setDeparture] = useState()
-  const [roomNumber, setRoomNumber] = useState()
+  const [roomType, setRoomType] = useState("")
+  const [arrival, setArrival] = useState("")
+  const [departure, setDeparture] = useState("")
+  const [roomNumber, setRoomNumber] = useState("")
 
   const handleSubmit =  async (e)=>{
     e.preventDefault()
@@ -95,7 +93,7 @@ const Home = () => {
               id="roomType" value={roomType} onChange={(e)=>setRoomType(e.target.value)}
               className="w-full bg-gray-200 text-gray-900 p-2 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none transition"
             >
-              <option value="Deluxe">Select Type</option>
+              <option value="">Select Type</option>
               <option value="Deluxe">Deluxe</option>
               <option value="Regular">Regular</option>
               <option value="Standard">Standard</option>
@@ -133,7 +131,7 @@ const Home = () => {
               id="roomType" value={roomNumber} onChange={(e)=>setRoomNumber(e.target.value)}
               className="w-full bg-gray-200 text-gray-900 p-2 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none transition"
             >
-              <option value="Deluxe">Room</option>
+              <option value="">Room</option>
               <option value="1 ">1 Room</option>
               <option value="2 ">2 Rooms</option>
               <option value="3 ">3 Rooms</option>
